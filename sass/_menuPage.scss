@@ -1,0 +1,62 @@
+div#menuPageContainer {
+  @include blockPage();
+  display: none;
+
+  & div#menuPage {
+    min-width: 50%;
+    max-width: 7rem;
+    height: 80vh;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.676);
+    padding: 100px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    & div.new-pass-container {
+      width: fit-content;
+      height: fit-content;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.087);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.151);
+      }
+
+      & img {
+        $size: 4rem;
+        width: $size;
+        height: $size;
+      }
+    }
+
+    & div#cancelButton {
+      cursor: pointer;
+      padding: 5px 10px;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+      background-color: rgb(189, 78, 78);
+      display: flex;
+      width: fit-content;
+      position: fixed;
+      bottom: 2%;
+      right: 2%;
+
+      &:hover {
+        filter: brightness(130%);
+      }
+    }
+  }
+}

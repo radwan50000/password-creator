@@ -1,0 +1,106 @@
+main {
+  & section#password-container {
+    position: relative;
+    width: 70%;
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    margin: 150px auto 50px auto;
+    padding: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 30vh;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    & img#add-icon {
+      position: absolute;
+      width: 45px;
+      top: 5%;
+      right: 2%;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: transparent;
+      border-radius: 50%;
+      padding: 5px;
+      &:hover {
+        background-color: white;
+        border-radius: 50%;
+        padding: 5px;
+      }
+    }
+
+    & div.password-card {
+      width: 25rem;
+      height: 8rem;
+      background-color: #f3f3f3;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & div.details-part {
+        width: 80%;
+        padding-top: 20px;
+        display: flex;
+        gap: 30px;
+        align-items: space-between;
+        flex-direction: column;
+
+        & div.card-tools {
+          display: flex;
+          gap: 20px;
+          direction: rtl;
+          width: 95%;
+
+          & div {
+            cursor: pointer;
+            padding: 4px;
+            transition: 0.3s;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover img {
+              filter: invert(1);
+            }
+
+            & img {
+              width: 20px;
+              transition: 0.3s;
+            }
+          }
+
+          & div.remove:hover {
+            background-color: red;
+          }
+
+          & div.regenerate:hover {
+            background-color: black;
+          }
+        }
+
+        & p {
+          font-size: 20px;
+          @include cairo(700);
+        }
+      }
+
+      & div.image-part {
+        display: flex;
+        width: 20%;
+        height: 100%;
+        padding: 0px 50px;
+        justify-content: center;
+        align-items: center;
+        & img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}
